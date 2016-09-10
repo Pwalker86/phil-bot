@@ -12,10 +12,14 @@ GEM
       recursive-open-struct
     coderay (1.1.1)
     dotenv (2.1.0)
+    eventmachine (1.2.0.1)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.10.0)
       faraday (>= 0.7.4, < 0.10)
+    faye-websocket (0.10.3)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.5.1)
     gli (2.13.4)
     hashie (3.4.3)
     httparty (0.13.7)
@@ -54,6 +58,7 @@ PLATFORMS
 DEPENDENCIES
   blanket_wrapper
   dotenv
+  faye-websocket
   pry
   slack-ruby-client
 

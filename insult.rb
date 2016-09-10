@@ -1,7 +1,7 @@
 class Insult
   attr_reader :response
   def initialize
-    @response = Blanket.wrap("http://quandyfactory.com/insult/json").get
+    @response = Blanket.wrap('http://quandyfactory.com/insult/json').get
   end
 
   def insult

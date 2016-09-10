@@ -13,15 +13,11 @@ end
 client = Slack::RealTime::Client.new
 
 client.on :message do |data|
-  user_hash = {}
-  channels = {}
-  text_arr = []
-  client.users.each{|x| user_hash[x[1]["id"]] = x[1]["name"]}.compact!
-  client.channels.each {|x| channels[x[1]["name"]] = x[1]["id"]}.compact!
-  text_arr = data.text.split(" ")
+  text_arr = data.text.split(' ')
   if data.text =~ /insult/
+    puts data
     i = Insult.new
-    client.web_client.chat_postMessage(channel: '#notifications', text: "Hey #{text_arr[1]}! #{i.insult}")
+    client.web_client.chat_postMessage(channel: '#general', text: "Hey #{text_arr[1]}! #{i.insult}")
   else
     puts data
   end

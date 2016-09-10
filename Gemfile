@@ -5,3 +5,4 @@ gem "slack-ruby-client"
 gem "dotenv"
 gem "pry"
 gem 'blanket_wrapper'
+gem 'faye-websocket'
